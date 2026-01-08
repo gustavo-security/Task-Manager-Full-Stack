@@ -1,0 +1,26 @@
+body.login-page {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+body.login-page input {
+  border-radius: 20px;
+}
+
+p {
+    font-size: 0.95rem;
+    margin: 10px 0 20px;
+    opacity: 0.85;
+    text-align: center;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
