@@ -13,7 +13,7 @@ export default function Home() {
 
 
     const [feedback, setFeedback] = useState({
-        type: "", // "success" | "error"
+        type: "", 
         message: ""
     });
 
@@ -22,7 +22,7 @@ export default function Home() {
 
     const [profile, setProfile] = useState({
         name: localStorage.getItem("userName") || "",
-        email: "" // vai ser preenchido do backend
+        email: "" 
     });
     const userName = profile.name || localStorage.getItem("userName");
 
@@ -34,7 +34,7 @@ export default function Home() {
 
 
     const [passwordFeedback, setPasswordFeedback] = useState({
-        type: "", // "success" | "error"
+        type: "", 
         message: ""
     });
 
@@ -58,7 +58,7 @@ export default function Home() {
     const handleLogout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("userName");
-        navigate("/"); // volta para a tela de login
+        navigate("/"); 
     };
 
     const handleKeyDown = (e) => {
@@ -142,7 +142,7 @@ export default function Home() {
     const handleChangePassword = async () => {
         const { currentPassword, newPassword, confirmPassword } = passwordForm;
 
-        // Limpa mensagens anteriores
+        
         setPasswordFeedback({ type: "", message: "" });
 
         if (!currentPassword && !newPassword && !confirmPassword) return;
@@ -198,14 +198,14 @@ export default function Home() {
         if (feedback.type === "success") {
             const timer = setTimeout(() => {
                 setFeedback({ type: "", message: "" });
-            }, 3000); // 3 segundos
+            }, 3000); 
 
             return () => clearTimeout(timer);
         }
     }, [feedback]);
 
 
-    // 🔹 Buscar tasks do backend
+    
     useEffect(() => {
         const fetchTasks = async () => {
             setTasksLoading(true);
@@ -235,7 +235,7 @@ export default function Home() {
     }, [token]);
 
 
-    // 🔹 Criar ou editar task
+    
     const handleSaveTask = async () => {
         if (newTask.title.trim() === "") {
             setTitleError(true);
@@ -244,7 +244,7 @@ export default function Home() {
 
         try {
             if (newTask.id) {
-                // Editar task (PUT)
+                
                 const payload = {
                     title: newTask.title,
                     description: newTask.description,
@@ -269,7 +269,7 @@ export default function Home() {
                 ));
 
             } else {
-                // Criar task (POST)
+                
                 const payload = {
                     title: newTask.title,
                     description: newTask.description,
@@ -299,7 +299,7 @@ export default function Home() {
         }
     };
 
-    // 🔹 Concluir task (usa PUT, não PATCH)
+    
     const handleConclude = async (task) => {
         try {
             const payload = {
@@ -326,7 +326,7 @@ export default function Home() {
         }
     };
 
-    // 🔹 Excluir task
+   
     const handleDelete = async (taskId) => {
         try {
             const res = await fetch(`http://localhost:8080/tasks/${taskId}`, {
@@ -340,7 +340,7 @@ export default function Home() {
         }
     };
 
-    // 🔹 Abrir modal para editar task
+    
     const handleEdit = (task) => {
         setNewTask({
             id: task.id,
@@ -352,11 +352,11 @@ export default function Home() {
         setIsModalOpen(true);
     };
 
-    // 🔹 Filtrar tasks
+    
     const filteredTasks = tasks.filter(task => {
-        // filtro por status
+        
         if (filter !== "ALL" && task.status !== filter) return false;
-        // filtro por pesquisa
+        
         if (searchTerm && !task.title.toLowerCase().includes(searchTerm.toLowerCase())) return false;
         return true;
     });
@@ -490,11 +490,11 @@ export default function Home() {
                         )}
 
 
-                        {/* Email (readonly) */}
+                        
                         <label>Email:</label>
                         <input type="text" value={profile.email} readOnly />
 
-                        {/* Salvar nome */}
+                       
                         <button
                             className="btn-save"
                             disabled={!profile.name.trim() || profile.name === localStorage.getItem("userName")}
@@ -505,7 +505,7 @@ export default function Home() {
 
                         <hr />
 
-                        {/* Senha */}
+                        
                         <h4>Trocar senha</h4>
                         <input
                             type="password"
@@ -540,7 +540,7 @@ export default function Home() {
                             </span>
                         )}
 
-                        {/* Salvar senha */}
+                        
                         <div className="profile-actions">
                             <button
                                 className="btn-save"

@@ -24,7 +24,7 @@ function App() {
     const [signIn, toggle] = useState(true);
     const navigate = useNavigate();
 
-    // 🔹 state do cadastro
+   
     const [registerForm, setRegisterForm] = useState({
         name: "",
         email: "",
