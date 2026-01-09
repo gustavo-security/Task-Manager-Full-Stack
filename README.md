@@ -33,7 +33,7 @@ O sistema permite **autenticação de usuários** e **controle completo de taref
 - Spring Web
 - Spring Data JPA
 - Maven
-- Banco de dados configurável
+- PostgreSQL
 - Arquitetura REST
 
 ### Frontend
