@@ -75,9 +75,9 @@ TaskManager-FullStack
 ### Pré-requisitos
 
 	- Java 17+
-	-	Node.js 18+
-	-	Maven
-	-	Git
+	- Node.js 18+
+	- Maven
+	- Git
 
 ⸻
 
