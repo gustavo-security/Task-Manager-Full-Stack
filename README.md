@@ -120,10 +120,10 @@ Usuários não autenticados não conseguem acessar rotas restritas.
 ## 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de:
-	-	Consolidar conhecimentos em Java + Spring Boot
-	-	Praticar React e componentização
-	-	Entender a comunicação Full Stack
-	-	Aplicar conceitos reais usados no mercado
+	- Consolidar conhecimentos em Java + Spring Boot<br>
+	- Praticar React e componentização<br>
+	- Entender a comunicação Full Stack<br>
+	- Aplicar conceitos reais usados no mercado<br>
 
 ---
 
