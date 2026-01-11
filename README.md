@@ -5,27 +5,27 @@ O sistema permite **autenticação de usuários** e **controle completo de taref
 
 ---
 
-## 📌 Funcionalidades
+## Funcionalidades
 
-### 🔐 Autenticação
+### Autenticação
 - Login de usuário
 - Proteção de rotas no frontend
 - Comunicação segura com o backend
 
-### 📝 Gerenciamento de Tarefas
+### Gerenciamento de Tarefas
 - Criar tarefas
 - Listar tarefas
 - Atualizar tarefas
 - Remover tarefas
 
-### 🌐 Arquitetura
+### Arquitetura
 - Backend desacoplado do frontend
 - Comunicação via **API REST**
 - Organização em camadas (**Controller**, **Service**, **Repository**)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Backend
 - **Java**
@@ -46,7 +46,7 @@ O sistema permite **autenticação de usuários** e **controle completo de taref
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```bash
 TaskManager-FullStack
@@ -70,7 +70,7 @@ TaskManager-FullStack
     └── package.json
 
 ```
-## ▶️ Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 
@@ -81,7 +81,7 @@ TaskManager-FullStack
 
 ⸻
 
-🔧 Backend (Spring Boot)
+Backend (Spring Boot)
 ``` bash
 cd back-end
 ./mvnw spring-boot:run
@@ -90,7 +90,7 @@ O backend será iniciado em:
 ``` bash
 http://localhost:8080
 ```
-💻 Frontend (React)
+Frontend (React)
 ``` bash
 cd front-end
 npm install
@@ -100,7 +100,7 @@ O frontend será iniciado em:
 ``` bash
 http://localhost:5173
 ```
-## 🔗 Comunicação Frontend ↔ Backend
+## Comunicação Frontend ↔ Backend
 
 - O frontend se comunica com o backend através de requisições HTTP (REST).
 - As chamadas estão centralizadas em:
@@ -109,7 +109,7 @@ http://localhost:5173
 src/services/api.js
 ```
 
-## 🔐 Proteção de Rotas
+## Proteção de Rotas
 
 O acesso a páginas protegidas é controlado por:
 ``` bash
@@ -117,7 +117,7 @@ src/routes/ProtectedRoute.jsx
 ```
 Usuários não autenticados não conseguem acessar rotas restritas.
 
-## 🎯 Objetivo do Projeto
+## Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de:
 	- Consolidar conhecimentos em Java + Spring Boot<br>
